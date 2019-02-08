@@ -5,9 +5,20 @@ ENV GIT_SSH_COMMAND='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyCheckin
 
 # Installs dependencies from alpine's repository
 RUN apk --no-cache upgrade && \
-    apk --no-cache add tzdata ca-certificates \
-    git gcc openssh python \
-    py-pip curl bash bc openssl-dev
+    apk --no-cache add make \
+                       tzdata \
+                       ca-certificates \
+                       curl \
+                       gzip \
+                       git \
+                       gcc \
+                       openssh \
+                       python \
+                       py-pip \
+                       curl \
+                       bash \
+                       bc \
+                       openssl-dev
 
 # Installs Amazon's client
 RUN pip install awscli
