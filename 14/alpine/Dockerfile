@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:14.15-alpine3.10
 
 # Forces git clone to ignore unknown host
 ENV GIT_SSH_COMMAND='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
