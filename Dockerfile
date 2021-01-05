@@ -12,6 +12,7 @@ RUN apk --no-cache upgrade && \
                        gzip \
                        git \
                        gcc \
+                       g++ \
                        openssh \
                        python \
                        py-pip \
