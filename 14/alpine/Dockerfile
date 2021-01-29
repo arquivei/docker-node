@@ -27,7 +27,7 @@ RUN bash /tmp/gcloud_install.sh --disable-prompts --install-dir=/usr/local
 ENV PATH $PATH:/usr/local/google-cloud-sdk/bin
 
 # Sets default timezone
-RUN echo "America/Sao_Paulo" > /etc/timezone
+RUN ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 
 # Cleanup
 RUN rm -rf /tmp/*
