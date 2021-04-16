@@ -24,8 +24,5 @@ RUN apk --no-cache upgrade && \
 # Sets default timezone
 RUN ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 
-# Cleanup
-RUN rm -rf /tmp/*
-
 # Default command
 CMD ["bash"]
